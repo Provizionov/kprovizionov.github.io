@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=cyrillic-ext');
+/* font-family: 'Open Sans', sans-serif; */
+
+@import url('animate.css');
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.main-body{
+    position: relative;
+    overflow: hidden;
+}
+.main-body:after {
+    content: '';
+    background: #ccc;
+    
+    position: absolute;
+    left:-20%;
+    right: -20%;
+    top:-20%;
+    bottom: 143px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d90646+0,eb3f2d+100 */
+    background: #d90646; /* Old browsers */
+    background: -moz-linear-gradient(top, #d90646 0%, #eb3f2d 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #d90646 0%,#eb3f2d 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #d90646 0%,#eb3f2d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d90646', endColorstr='#eb3f2d',GradientType=0 ); /* IE6-9 */
+    transform: rotate(-8deg);
+}
+
+.header, .block1  {
+    position: relative;
+    z-index: 1;
+}
+.header {
+    margin-top: 42px;
+    margin-bottom: 30px;
+    
+    
+}
+.logo{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+.block1{
+    color:white;
+}
+.block1 .container {
+    display: flex;
+}
+.left-block {
+    width: 50%; 
+}
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 72px;
+    font-weight: bold;
+    color:white;
+    letter-spacing: 4px;
+    margin-bottom: 0;
+}
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 28px;
+    margin-bottom: 30px;
+}
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 24px;
+}
+.right-block {
+    width: 50%; 
+    text-align: center;
+}
+.button-block {
+    padding-top: 25px;
+}
+.button {
+    display: inline-block;
+    background: white;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 62px;
+    
+    color: #dd1341;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px;
+    
+}
+
+
+
+
+/* popup css*/
+.popup-window {
+    position: absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    background: rgba(0, 0, 0, 0.86);
+    z-index: 2;
+    
+    /* hide */
+    display: none;
+    
+    animation-duration: 0.25s;
+}
+.form-popup {
+    max-width: 681px;
+    width: 100%;
+}
+.popup-window__wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    
+}
+.form-popup h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 72px;
+    font-weight: bold;
+    line-height: 100%;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+    
+    visibility: hidden;
+    
+}
+.form-popup h2.opened{
+    visibility: visible;
+}
+.form-popup-wrapper {
+    background: white;
+    padding: 73px 54px;
+    border-radius: 10px;
+    position: relative;
+    
+    display:  none;
+}
+.form-group {
+    margin-bottom: 30px;
+}
+label {
+    color: #515151;
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    display: block;
+    margin-bottom: 10px;
+    
+}
+input[type="text"]{
+    height: 60px;
+    border: 1px solid #c2c2c2;
+    width:100%;
+    border-radius: 10px;
+    outline: none;
+    padding: 0 10px;
+    box-sizing: border-box;
+    
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    color: #515151;
+}
+button {
+    background: #ff5858;
+    width: 100%;
+    height: 60px;
+    border: 1px solid #c2c2c2;
+    border-radius: 10px;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    outline: none;
+    margin-top: 20px;
+    
+}
+
+.close-button {
+    display: block;
+    width: 74px;
+    height: 74px;
+   
+    border-radius: 100%;
+    border: 1px solid #c3c3c3;
+    background: url(../img/close.png);
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+    position: absolute;
+    right: -37px;
+    top:-37px;
+}
+.main-img {
+    transform-origin: 50% 50%;
+}
+.opened {
+    display: block !important;
+}
+/* 544px,768px, 992px, 1200px */
+/* mobile style */
+@media (max-width:960px){
+    
+    .right-block {
+        display: none;
+    }
+    .left-block {
+        width: 100%;
+    }
+    .main-body:after {
+        transform: rotate(0);
+        left:0;
+        top:0;
+        right:0;
+        bottom:0;
+    }
+    .main-body {
+        height: 100vh;
+        overflow: scroll;
+    }
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .logo {
+        font-size: 30px;
+    }
+    h1 {
+        font-size: 35px; 
+        letter-spacing: 0;
+    }
+    .header {
+        margin-top: 20px;
+        margin-bottom: 5px;
+    } 
+    .button-block {
+        padding-top: 0;
+    }
+    .form-popup h2 {
+        font-size: 40px;
+    }
+    .close-button {
+        background-size: 15px;
+        width:33px;
+        height: 33px;
+        right: 10px;
+        top:10px;
+    }
+    .form-popup-wrapper {
+        padding: 33px 31px;
+        margin:0 15px;
+    }
+}
